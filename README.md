@@ -8,7 +8,7 @@ ________
 ## Datasets
 
 1. The codes take the "breast" as an example. 
-2. More UCI datasets can be obtained from https://archive.ics.uci.edu/ml/datasets.html
+2. Modify the setname variable in UCI_Linear_FSVM.m and UCI_Kernel_FSVM.m to evaluate other dataset. (UCI datasets: https://archive.ics.uci.edu/ml/datasets.html)
 3. The data should be first split into the training and test data randomly (you can set more split than 10). (refer to "breast" dataset)
 4. Please note the pre-process of the original data. Some of the UCI dataets have been pre-processed while some are not. Please pre-process the original data if necessary, which is important.
 
@@ -18,7 +18,7 @@ __________
 
 ### Note: In the released codes, for better understanding the algorithm, four variants are provided to evaluate the utility of the total scatter matrix and the intra-class scatter matrix, with and withour updating the scatter matrix during the alternative updating stage.
 
-* FSVM_train_St.m    GBCD algorithm to solve FSVM by using the total scatter matrix without updating the scatter matrix
+* FSVM_train_St.m - GBCD algorithm to solve FSVM by using the total scatter matrix without updating the scatter matrix
 
 * FSVM_train_update_St.m - GBCD algorithm to solve FSVM by using the total scatter matrix with updating the scatter matrix
 
