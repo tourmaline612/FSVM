@@ -3,7 +3,6 @@
 ________
 ## Matlab implementations of the linear and kernel FSVM algorithm.
 
-
 ________
 ## Datasets
 
@@ -59,6 +58,54 @@ ________
 
 [5] C.-C Chang, and C.-J Lin. "LIBSVM : a library for support vector machines", ACM TIST, 2011. Software available at http://www.csie.ntu.edu.tw/~cjlin/libsvm
 
+
+
+# CNN-FSVM
+
+________
+## Matlab implementations of the CNN-FSVM algorithm.
+
+
+________
+## Datasets
+
+1. Please download the imdb.mat data. (waiting ... )
+2. Put the imdb.mat data in the corresponding path /datasetName_data
+3. Please download the imagenet-resnet-50-dag.mat from (http://www.vlfeat.org/matconvnet/models/imagenet-resnet-50-dag.mat) and put it in the path /caltech101_data
+
+__________
+## Description and Instructions
+
+* CIFAR_FSVM.m - The entrance function to evaluate on Cifar10 and Cifar100, please note to set the datasetName 
+
+* init_ResNet110_CIFAR_FSVM.m - Initialize the ResNet-110 architecture with the radius-margin based loss layer
+
+* train_dag_CIFAR_FSVM.m - Main function for network training on Cifar10 and Cifar100 datasets
+
+* CALTECH101_FSVM.m - The entrance function to evaluate on Caltech101
+
+* train_dag_CALTECH101_FSVM.m - Main function for network training on Caltech101 dataset
+
+* HingeLoss.m, vl_nnhingeloss - Class and function to calculate the forward and backward of the margin based loss 
+
+* RadiusLoss.m, vl_nnradiusloss - Class and function to calculate the forward and backward of the radius based loss
+
+* /output_cifar10/cifar10-resnet-fsvm/trained-net-epoch-160.mat is the trained net on cifar10 with the radius-margin based loss
+* /output_cifar100/cifar100-resnet-fsvm/trained-net-epoch-160.mat is the trained net on cifar100 with the radius-margin based loss
+* The trained net on caltech101 can be downloaded from (waiting ...)
+
+### Quickstart
+
+1. The /matlab/mex files are compiled with Linux. Please download the MatCovNet Toolbox and complie it for windows, then copy the new mex files to /matlab/mex  
+2. Run CNN_FSVM.m directly for cifar10 dataset
+3. To evaluate differet dataset, please note to change the datasetName and learningRate in corresponding place (with annotation in the codes)
+
+________
+## References
+
+[1] X. Wu, W. Zuo*, L. Lin, W. Jia and D. Zhang."F-SVM: Combination of Feature Transformation and SVM Learning via Convex Relaxation", IEEE TNNLS 2018.
+
+[2] K. He, X. Zhang, S. Ren and J. Sun. "Deep Residual Learning for Image Recognition", CVPR 2016.
 
 ________
 ## Citation
